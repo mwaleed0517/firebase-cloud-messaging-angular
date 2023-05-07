@@ -1,0 +1,7 @@
+<h1 *ngIf="!message?.notification?.title">No Message Yet!</h1>
+
+<ng-container *ngIf="!!message?.notification?.title">
+  <h1 *ngIf="!!message?.notification?.title">{{message?.notification?.title}}</h1>
+  <img *ngIf="!!message?.notification?.image" [src]="message?.notification?.image"/>
+  <p *ngIf="!!message?.notification?.body">{{message?.notification?.body}}</p>
+</ng-container>
